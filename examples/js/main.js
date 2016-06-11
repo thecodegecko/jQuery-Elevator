@@ -10,4 +10,10 @@ $(document).ready(function(){
 		openingClass: 'opening',
 		closingClass: 'closing'
 	});
+	var closed = true;
+	$('.toggle-all').click(function(e){
+		var functionToCall = closed ? 'open' : 'close';
+		closed = !closed;
+		$('.tcg-elevator').tcgElevator(functionToCall);
+	})
 })
